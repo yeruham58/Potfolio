@@ -1,8 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/avatar.png";
+// import myImg from "../../Assets/avatar.png";
 import myImg1 from "../../Assets/profile_img.jpeg";
-import Tilt from "react-parallax-tilt";
+// import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
 } from "react-icons/ai";
