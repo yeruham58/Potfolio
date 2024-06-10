@@ -36,9 +36,10 @@ jobs:
       run: npm run build
 
     - name: Deploy to S3
-      run: aws s3 sync ${{ env.DIST }} s3://${{ env.BUCKET }} --delete
+      run: aws s3 sync --delete ${{ env.DIST }} s3://${{ env.BUCKET }}
 
     - name: Invalidate CloudFront Cache
-      run: aws cloudfront create-invalidation \
+      run: |
+        aws cloudfront create-invalidation \
           --distribution-id ${{ env.DIST_ID }} \
           --paths "/*"
