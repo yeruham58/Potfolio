@@ -29,17 +29,17 @@ jobs:
     #   with:
     #     node-version: '20'
 
-    # - name: Install Dependencies
-    #   run: npm ci --production
+    - name: Install Dependencies
+      run: npm ci --production
 
-    # - name: Build Static Website
-    #   run: npm run build
+    - name: Build Static Website
+      run: npm run build
 
-    # - name: Deploy to S3
-    #   run: aws s3 sync ${{ env.DIST }} s3://${{ env.BUCKET }} --delete
+    - name: Deploy to S3
+      run: aws s3 sync ${{ env.DIST }} s3://${{ env.BUCKET }} --delete
 
-    # - name: Invalidate CloudFront Cache
-    #   run: |
-    #     aws cloudfront create-invalidation \
-    #       --distribution-id ${{ env.DIST_ID }} \
-    #       --paths "/*"
+    - name: Invalidate CloudFront Cache
+      run: |
+        aws cloudfront create-invalidation \
+          --distribution-id ${{ env.DIST_ID }} \
+          --paths "/*"
