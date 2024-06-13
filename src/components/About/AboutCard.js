@@ -8,7 +8,7 @@ function AboutCard() {
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
-            With over seven years of comprehensive web development experience, I specialize in both front-end and back-end technologies.
+            With eight years of comprehensive web development experience, I specialize in both front-end and back-end technologies.
             <br />
             <br />
             At Kinsta, I worked as a JavaScript Developer and Team Lead.
